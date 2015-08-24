@@ -1,0 +1,19 @@
+<h1>All messages</h1>
+<h2>Once written, cannot be deleted</h2>
+<br>
+
+<table>
+  <tr>
+    <th>From</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.from %></td>
+      <td><%= message.text %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<%= link_to 'Leave a message', new_message_path %>
