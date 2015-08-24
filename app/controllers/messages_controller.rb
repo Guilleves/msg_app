@@ -1,5 +1,9 @@
 class MessagesController < ApplicationController
 
+def index
+	@messages = Message.all
+end
+
 def show
 	@message = Message.find(params[:id])
 	#returns object corresponding to the given id -- id is the parameter needed by the router

@@ -1,0 +1,17 @@
+<h1>All messages</h1>
+<h2>por qué falopa no aparecen los nombres</h2>
+<table>
+  <tr>
+    <th>From</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.from %></td>
+      <td><%= message.text %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Leave a message', new_message_path %>
